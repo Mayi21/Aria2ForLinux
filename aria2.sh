@@ -126,7 +126,7 @@ Download_aria2(){
 }
 Download_aria2_conf(){
     mkdir -p "${file}" && cd "${file}"
-    wget -N "https://raw.githubusercontent.com/P3TERX/aria2.conf/master/aria2.conf"
+    wget -N "https://raw.githubusercontent.com/Mayi21/Aria2ForLinux/master/conf/aria2.conf"
     [[ ! -s "aria2.conf" ]] && echo -e "${Error} Aria2 配置文件下载失败 !" && rm -rf "${file}" && exit 1
     wget -N "https://raw.githubusercontent.com/P3TERX/aria2.conf/master/autoupload.sh"
     [[ ! -s "autoupload.sh" ]] && echo -e "${Error} 附加功能脚本[autoupload.sh]下载失败 !" && rm -rf "${file}" && exit 1
