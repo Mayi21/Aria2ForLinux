@@ -38,9 +38,17 @@ install_ariang(){
         }}" > ariang.conf
     systemctl restart nginx
 }
+install_rclone(){
+    curl https://rclone.org/install.sh | sudo bash
+}
 updateAndInstall
-read -p "input ip:" ip
+read -p "请输入本机IP(please input ip):" ip
 install_ariang
+install_rclone
+printf "aria2安装成功\n
+        nginx安装成功\n
+        ariang安装成功\n
+        rclone安装成功,使用 rclone config配置rclone(默认rclone的名字为:GoogleDrive)\n"
 
 
 
