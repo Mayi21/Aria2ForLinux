@@ -46,7 +46,6 @@ read -p "请输入本机IP(please input ip):" ip
 install_ariang
 install_rclone
 printf "
-aria2安装成功
 nginx安装成功
 ariang安装成功
 rclone安装成功,使用 rclone config配置rclone(默认rclone的名字为:GoogleDrive)"
