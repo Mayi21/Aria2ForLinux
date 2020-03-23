@@ -40,18 +40,7 @@ install_ariang(){
 }
 install_rclone(){
 curl https://rclone.org/install.sh | sudo bash
-rclone config << EOF
-n
-GoogleDrive
-13
-
-
-1
-
-
-n
-n
-EOF
+rclone config
 }
 install_aria2(){
 yum -y update
