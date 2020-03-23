@@ -64,18 +64,5 @@ EOF
 updateAndInstall
 ip=$(wget -qO- -t1 -T2 ipinfo.io/ip)
 install_ariang
-install_aria2
 install_rclone
-clear
-printf "
-nginx安装成功
-ariang安装成功
-aria2安装成功
-rclone安装成功
-"
-
-
-
-
-
-
+install_aria2
