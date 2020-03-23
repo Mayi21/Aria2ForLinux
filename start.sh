@@ -36,6 +36,7 @@ install_ariang(){
                 root /data/www/ariang;
                 index index.html index.htm;
         }}" > ariang.conf
+    chmod -R 777 /data
     systemctl restart nginx
 }
 install_rclone(){
