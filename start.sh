@@ -4,7 +4,7 @@
 # date:20200225
 # Begin for Centos7
 #===============================================
-ip=""
+ip=''
 updateAndInstall(){
     yum -y update
     yum -y install epel-release 
@@ -39,16 +39,47 @@ install_ariang(){
     systemctl restart nginx
 }
 install_rclone(){
-    curl https://rclone.org/install.sh | sudo bash
+curl https://rclone.org/install.sh | sudo bash
+rclone config << EOF
+n
+GoogleDrive
+13
+
+
+1
+
+
+n
+n
 }
+install_aria2(){
+yum -y update
+wget -N https://raw.githubusercontent.com/Mayi21/Aria2ForLinux/master/aria2.sh && chmod +x aria2.sh
+bash aria2.sh << EOF
+1
+
+EOF
+bash aria2.sh << EOF
+12
+y
+EOF
+bash aria2.sh << EOF
+6
+EOF
+}
+install_aria2
 updateAndInstall
-read -p "请输入本机IP(please input ip):" ip
+ip=$(curl ifconfig.me)
 install_ariang
+install_aria2
 install_rclone
+
 printf "
 nginx安装成功
 ariang安装成功
-rclone安装成功,使用 rclone config配置rclone(默认rclone的名字为:GoogleDrive)"
+aria2安装成功
+rclone安装成功
+"
 
 
 
