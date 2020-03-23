@@ -51,6 +51,7 @@ GoogleDrive
 
 n
 n
+EOF
 }
 install_aria2(){
 yum -y update
