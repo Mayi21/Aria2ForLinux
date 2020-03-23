@@ -68,9 +68,8 @@ bash aria2.sh << EOF
 6
 EOF
 }
-install_aria2
 updateAndInstall
-ip=$(curl ifconfig.me)
+ip=$(wget -qO- -t1 -T2 ipinfo.io/ip)
 install_ariang
 install_aria2
 install_rclone
