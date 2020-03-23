@@ -20,7 +20,6 @@ updateAndInstall(){
     systemctl start nginx
     systemctl enable nginx.service
     systemctl stop firewalld
-    echo "update and install complate!"
 }
 install_ariang(){
     mkdir -p /data/Download
