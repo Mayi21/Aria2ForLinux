@@ -40,7 +40,11 @@ install_ariang(){
 }
 install_rclone(){
 curl https://rclone.org/install.sh | sudo bash
-rclone config
+if [ -f "/root/rclone.conf" ];then
+    mv /root/rclone.conf /root/.config/rclone/
+else
+    rclone config
+fi
 }
 install_aria2(){
 yum -y update
