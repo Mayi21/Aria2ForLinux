@@ -36,7 +36,9 @@ install_ariang(){
                 index index.html index.htm;
         }}" > ariang.conf
     chmod -R 777 /data
-    systemctl restart nginx
+    chmod -R 777 /data/www
+    nginx -s stop
+    nginx -c  /etc/nginx/nginx.conf
 }
 install_rclone(){
 curl https://rclone.org/install.sh | sudo bash
