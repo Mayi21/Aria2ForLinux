@@ -71,3 +71,6 @@ install_aria2
 ip=$(wget -qO- -t1 -T2 ipinfo.io/ip)
 install_ariang
 install_rclone
+bash /root/aria2.sh << EOF
+8
+EOF
