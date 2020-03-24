@@ -60,9 +60,12 @@ EOF
 bash aria2.sh << EOF
 6
 EOF
+if [ ! -f "/root/aria2.sh" ];then
+    wget -N https://raw.githubusercontent.com/Mayi21/Aria2ForLinux/master/aria2.sh
+fi
 }
 updateAndInstall
+install_aria2
 ip=$(wget -qO- -t1 -T2 ipinfo.io/ip)
 install_ariang
 install_rclone
-install_aria2
