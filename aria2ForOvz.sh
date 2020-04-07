@@ -48,8 +48,6 @@ install_aria2{
     cd /root/.aria2
     git clone "https://github.com/Mayi21/Aria2ForLinux.git"
     mv Aria2ForLinux/conf/* /root/.aria2/
-    rm -rf aria2.conf
-    mv aria.conf aria2.conf
     bash <(wget -qO- git.io/tracker.sh) ${aria2_conf}
     aria2c --conf-path=/root/.aria2/aria2.conf -D
     echo "aria2c --conf-path=/root/.aria2/aria2.conf -D &" > /etc/rc.d/rc.local
