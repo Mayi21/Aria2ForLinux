@@ -17,8 +17,6 @@ updateAndInstall(){
     yum -y install nginx 
     yum -y install bzip2
     yum -y install vim
-    systemctl start nginx
-    systemctl enable nginx.service
     systemctl stop firewalld
 }
 install_ariang(){

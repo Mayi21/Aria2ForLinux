@@ -20,7 +20,7 @@ DRIVE_PATH='/DRIVEX/Download'
 # Aria2下载目录
 # Aria2 一键安装管理脚本使用选项统一进行修改。
 # Aria2 Pro Docker 镜像无需修改，通过目录映射进行设置。
-DOWNLOAD_PATH='/root/Download'
+DOWNLOAD_PATH='/storge/Download'
 
 ## 文件过滤 ##
 
