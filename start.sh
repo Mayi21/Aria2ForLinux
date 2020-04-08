@@ -35,7 +35,6 @@ install_ariang(){
         }}" > ariang.conf
     chmod -R 777 /data
     chmod -R 777 /data/www
-    nginx -s stop
     nginx -c  /etc/nginx/nginx.conf
 }
 install_rclone(){
