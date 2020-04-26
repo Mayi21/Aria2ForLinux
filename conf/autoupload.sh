@@ -12,7 +12,7 @@
 ## 基础设置 ##
 
 # Rclone 配置时填写的网盘名(name)
-DRIVE_NAME='GoogleDrive'
+DRIVE_NAME='drive'
 
 # 网盘目录。即上传目标路径，留空为网盘根目录，末尾不要有斜杠。
 DRIVE_PATH='/DRIVEX/Download'
