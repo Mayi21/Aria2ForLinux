@@ -9,7 +9,7 @@
 # Blog: https://p3terx.com
 #=====================================================
 
-DOWNLOAD_PATH='/root/Download'
+DOWNLOAD_PATH='/storage'
 
 FILE_PATH=$3
 REMOVE_DOWNLOAD_PATH=${FILE_PATH#${DOWNLOAD_PATH}/}
