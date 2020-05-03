@@ -40,7 +40,12 @@ install_ariang(){
 install_rclone(){
 curl https://rclone.org/install.sh | sudo bash
 if [ -f "/root/rclone.conf" ];then
-    mv /root/rclone.conf /root/.config/rclone/
+    if [ -d "/root/.config/rclone" ];then
+        mv /root/rclone.conf /root/.config/rclone/
+    else
+        mkdir -p /root/.config/rclone/
+    fi
+    
 else
     rclone config
 fi
