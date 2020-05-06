@@ -45,7 +45,6 @@ if [ -f "/root/rclone.conf" ];then
     else
         mkdir -p /root/.config/rclone/
     fi
-    
 else
     rclone config
 fi
@@ -55,7 +54,7 @@ yum -y update
 wget -N https://raw.githubusercontent.com/Mayi21/Aria2ForLinux/master/aria2.sh && chmod +x aria2.sh
 bash aria2.sh << EOF
 1
-
+1.35.0
 EOF
 bash aria2.sh << EOF
 12
