@@ -44,6 +44,7 @@ if [ -f "/root/rclone.conf" ];then
         mv /root/rclone.conf /root/.config/rclone/
     else
         mkdir -p /root/.config/rclone/
+        mv /root/rclone.conf /root/.config/rclone/
     fi
 else
     rclone config
